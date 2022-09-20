@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <script defer src="./index.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <!-- <form action="/thankyou.html" method="GET"> -->
+    <form>
+        <h1>Forms</h1>
+        <h3 id="welcome"></h3>
+        <label for="username">Username</label>
+        <input id="username" type="text" name="username" placeholder="Username" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" name="password" required>
+
+        <label for="england">England</label>
+        <input id="england" type="radio" value="England" name="location" checked>
+
+        <label for="scotland">Scotland</label>
+        <input id="scotland" type="radio" value="Scotland" name="location">
+
+        <label for="wales">Wales</label>
+        <input id="wales" type="radio" value="Wales" name="location">
+
+        <label for="northern-ireland">Northern Ireland</label>
+        <input id="northern-ireland" type="radio" value="Northern Ireland" name="location">
+
+        <textarea rows="5" cols="30" placeholder="Enter some text..."></textarea>
+        <input type="submit" value="Do the thing">
+
+        <label for="dark-mode">Dark Mode</label>
+        <input id="dark-mode" type="checkbox" name="darkmode" value="dark">
+    </form>
+</body>
+</html>
