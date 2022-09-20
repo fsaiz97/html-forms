@@ -7,28 +7,33 @@ function addWelcome(username) {
 
 function handleSubmit(event) {
     event.preventDefault();
-    // console.log("form submitted");
-    // console.log("Username:", event.target.username.value)
+    console.log("form submitted");
+    console.log("Username:", event.target.username.value)
     // or
     // let username = document.getElementById("username").value;
 
-    // let usernameNode = event.target.username;
-    // let passwordNode = event.target.password;
-    // addWelcome(usernameNode.value);
-    // usernameNode.value = '';
-    // passwordNode.value = '';
+    let usernameNode = event.target.username;
+    let passwordNode = event.target.password;
+    addWelcome(usernameNode.value);
+    usernameNode.value = '';
+    passwordNode.value = '';
 }
 
 form.addEventListener('submit', handleSubmit)
 
 let darkModeCheckbox = document.querySelector("#dark-mode");
 darkModeCheckbox.addEventListener('change', () => {
+    let allElements = document.querySelectorAll("*");
     if (darkModeCheckbox.checked) {
         newColour = "rgb(50,50,50)"
-        document.body.style.backgroundColor = newColour;
-        document.querySelector("textarea").style.backgroundColor = newColour;
+        allElements.forEach(element => {
+            element.style.backgroundColor = newColour;
+            element.style.color = "white";
+        })
     } else {
-        document.body.style.backgroundColor = "white";
-        document.querySelector("textarea").style.backgroundColor = "white";
+        allElements.forEach(element => {
+            element.style.backgroundColor = "white";
+            element.style.color = "black";
+        })
     }
 })
