@@ -2,3 +2,8 @@ input, textarea {
     display: block;
     margin-bottom: 20px;
 }
+
+.dark-mode {
+    background-color: rgb(50,50,50);
+    color: white;
+}

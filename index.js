@@ -23,17 +23,7 @@ form.addEventListener('submit', handleSubmit)
 
 let darkModeCheckbox = document.querySelector("#dark-mode");
 darkModeCheckbox.addEventListener('change', () => {
-    let allElements = document.querySelectorAll("*");
-    if (darkModeCheckbox.checked) {
-        newColour = "rgb(50,50,50)"
-        allElements.forEach(element => {
-            element.style.backgroundColor = newColour;
-            element.style.color = "white";
-        })
-    } else {
-        allElements.forEach(element => {
-            element.style.backgroundColor = "white";
-            element.style.color = "black";
-        })
-    }
+    document.body.classList.toggle("dark-mode");
+    let textInputs = document.querySelectorAll(".text-type-input")
+    textInputs.forEach(element => element.classList.toggle("dark-mode"))
 })
